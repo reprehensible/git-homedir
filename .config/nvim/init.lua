@@ -13,6 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.opt.termguicolors = true
 
+require("remap")
+
 require("lazy").setup({
 	{'nvim-telescope/telescope.nvim', tag = '0.1.3',
 	dependencies = { 'nvim-lua/plenary.nvim' }
@@ -41,9 +43,9 @@ require("lazy").setup({
 	{ 'lewis6991/gitsigns.nvim' },
 	{'ldelossa/litee.nvim' },
 	{'ldelossa/gh.nvim'},
+	{'pwntester/octo.nvim'},
 })
 
-require("remap")
 
 vim.g.everforest_background = 'soft'
 

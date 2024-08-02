@@ -1,4 +1,5 @@
 local lsp = require('lsp-zero')
+local util = require('lspconfig.util')
 
 lsp.preset('recommended')
 lsp.setup()
@@ -22,6 +23,11 @@ require('lspconfig').tsserver.setup({
 		},
 	},
 })
+require('lspconfig').eslint.setup {
+	settings = {
+		workingDirectory = { mode = 'auto' }
+	}
+}
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
