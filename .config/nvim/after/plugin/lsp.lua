@@ -23,11 +23,6 @@ require('lspconfig').tsserver.setup({
 		},
 	},
 })
-require('lspconfig').eslint.setup {
-	settings = {
-		workingDirectory = { mode = 'auto' }
-	}
-}
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
@@ -39,6 +34,13 @@ cmp.setup({
 		['<C-Space>'] = cmp.mapping.complete(),
 
 	})
+})
+
+require('lspconfig').eslint.setup({
+  root_dir = require('lspconfig.util').find_git_ancestor or vim.loop.os_homedir,
+  settings = {
+	workingDirectory = { mode = 'auto' }
+  }
 })
 
 lsp.on_attach(function(client, bufnr)
