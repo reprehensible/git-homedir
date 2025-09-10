@@ -38,7 +38,6 @@ require("lazy").setup({
 	{'catppuccin/nvim', name = "catppuccin", priority = 1000 },
 	{'edeneast/nightfox.nvim'},
 	{'kyazdani42/nvim-web-devicons'},
-	{'freddiehaddad/feline.nvim'},
 	{ "otavioschwanck/telescope-alternate" },
 	{ 'lewis6991/gitsigns.nvim' },
 	{'ldelossa/litee.nvim' },

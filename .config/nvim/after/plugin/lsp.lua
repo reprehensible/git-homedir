@@ -8,21 +8,12 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
 	-- Replace the language servers listed here 
 	-- with the ones you want to install
-	ensure_installed = {'tsserver', 'eslint', 'rust_analyzer'},
+	ensure_installed = {'eslint', 'rust_analyzer'},
 	handlers = {
 		lsp.default_setup,
 	},
 })
--- doesn't actually work
-require('lspconfig').tsserver.setup({
-	init_options = {
-		typescript = {
-			preferences = {
-				importModuleSpecifier = "relative" 
-			},
-		},
-	},
-})
+
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
